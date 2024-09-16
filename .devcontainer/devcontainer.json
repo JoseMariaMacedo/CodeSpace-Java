@@ -1,11 +1,15 @@
 {
   "name": "Java Development",
   "image": "mcr.microsoft.com/devcontainers/java:0-17",
-  "settings": {
-    "java.home": "/usr/local/openjdk-17"
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ]
+    }
   },
-  "extensions": [
-    "vscjava.vscode-java-pack"
-  ],
   "postCreateCommand": "mvn clean install"
 }
